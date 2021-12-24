@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 
 export const Card = styled.div`
-    border: 3px solid black;
-    border-radius: 15px;
 
 & img { width: 320px}
 `;

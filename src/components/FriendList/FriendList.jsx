@@ -1,8 +1,9 @@
 import propTypes from 'prop-types';
+import { ListOfFriends } from './FriendList.styled';
 
 export default function FriendList({ friends }) {
   return (
-    <ul className="friend-list">
+    <ListOfFriends>
       {friends.map(friend => (
         <li key={friend.id} className="item">
           <span className="status"></span>
@@ -10,7 +11,7 @@ export default function FriendList({ friends }) {
           <p className="name">{friend.name}</p>
         </li>
       ))}
-    </ul>
+    </ListOfFriends>
   );
 }
 
