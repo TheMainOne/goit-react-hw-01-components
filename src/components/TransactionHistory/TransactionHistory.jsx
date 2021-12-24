@@ -9,7 +9,7 @@ export default function TransactionHistory({ items }) {
       <th>Currency</th>
     </tr>
   </thead>
-    {items.map(item =>   <tbody>
+    {items.map(item =>   <tbody key={item.id}>
     <tr>
       <td>{item.type}</td>
       <td>{item.amount}</td>
