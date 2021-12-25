@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import { Section, SectionTitle, Sectionlist } from "./Statistics.styled";
+import { Section, SectionTitle, Sectionlist, SectionItem } from "./Statistics.styled";
 
 export default function Statistics({ title, stats }) {
   return (
@@ -8,10 +8,10 @@ export default function Statistics({ title, stats }) {
 
       <Sectionlist>
               {stats.map((stat) => (
-          <li key={stat.id} className="item">
-            <span className="label">{stat.label} </span>
+          <SectionItem key={stat.id}>
+            <span className="label">{stat.label}: </span>
             <span className="percentage">{stat.percentage}</span>
-          </li>
+          </SectionItem>
         ))}
       </Sectionlist>
     </Section>

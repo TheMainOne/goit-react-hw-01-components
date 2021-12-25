@@ -1,15 +1,15 @@
 import propTypes from 'prop-types';
-import { ListOfFriends } from './FriendList.styled';
+import { ListOfFriends, ListItem, ListOnlineTracker, ListOfflineTracker } from './FriendList.styled';
 
 export default function FriendList({ friends }) {
   return (
     <ListOfFriends>
       {friends.map(friend => (
-        <li key={friend.id} className="item">
-          <span className="status"></span>
+        <ListItem key={friend.id}>
+          {friend.isOnline ? <ListOnlineTracker></ListOnlineTracker> : <ListOfflineTracker></ListOfflineTracker>}
           <img className="avatar" src={friend.avatar} alt="User avatar" width="48" />
           <p className="name">{friend.name}</p>
-        </li>
+        </ListItem>
       ))}
     </ListOfFriends>
   );

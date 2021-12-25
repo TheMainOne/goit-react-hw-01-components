@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import { Card, Description, Paragraph, List } from "./User.styled";
+import { Card, Description, Paragraph, List, ListItem, ListItemStats } from "./User.styled";
 
 export default function User({ username, tag, location, avatar, stats }) {
     return (<Card>
@@ -14,18 +14,18 @@ export default function User({ username, tag, location, avatar, stats }) {
         </Description>
 
         <List>
-            <li>
-                <span>Followers </span>
+            <ListItem>
+                <ListItemStats>Followers: </ListItemStats>
                 <span>{stats.followers}</span>
-            </li>
-            <li>
-                <span>Views </span>
+            </ListItem>
+            <ListItem>
+                <ListItemStats>Views: </ListItemStats>
                 <span>{stats.views}</span>
-            </li>
-            <li>
-                <span>Likes </span>
+            </ListItem>
+            <ListItem>
+                <ListItemStats>Likes: </ListItemStats>
                 <span>{stats.likes}</span>
-            </li>
+            </ListItem>
         </List>
     </Card>);
 }
