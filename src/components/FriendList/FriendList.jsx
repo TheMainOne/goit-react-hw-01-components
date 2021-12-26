@@ -1,3 +1,4 @@
+import React from "react";
 import propTypes from 'prop-types';
 import { ListOfFriends, ListItem, ListOnlineTracker, ListOfflineTracker } from './FriendList.styled';
 

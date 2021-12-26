@@ -1,3 +1,4 @@
+import React from "react";
 import propTypes from "prop-types";
 import { Card, Description, Paragraph, List, ListItem, ListItemStats } from "./User.styled";
 
