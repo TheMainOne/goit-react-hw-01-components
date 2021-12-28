@@ -32,7 +32,10 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
+
+ &:not(:last-child) {
 margin-right: 10px;
+  } 
 `;
 
 export const ListItemStats = styled.span`

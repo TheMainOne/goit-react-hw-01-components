@@ -12,10 +12,13 @@ export const ListItem = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 15px;
   border: 3px solid #fe4f60;
   padding: 10px;
   border-radius: 20px;
+
+  &:not(:last-child) {
+margin-right: 15px;
+  } 
 `;
 
 export const ListOnlineTracker = styled.span`

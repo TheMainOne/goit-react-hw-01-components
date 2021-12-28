@@ -31,5 +31,7 @@ export const SectionItem = styled.li`
   border-radius: 10px;
   background: #fe4f60;
   color: white;
-  margin-right: 5px;
+  &:not(:last-child) {
+    margin-right: 5px;
+  } 
 `;
