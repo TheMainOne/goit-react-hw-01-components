@@ -32,10 +32,13 @@ export default function User({ username, tag, location, avatar, stats }) {
 }
 
 User.propTypes = {
-    username: propTypes.string,
-    tag: propTypes.string,
-    location: propTypes.string,
-    avatar: propTypes.string,
-    stats: propTypes.object,
-}
-
+    username: propTypes.string.isRequired,
+    tag: propTypes.string.isRequired,
+    location: propTypes.string.isRequired,
+    avatar: propTypes.string.isRequired,
+    stats: propTypes.shape({
+        followers: propTypes.number.isRequired,
+        views: propTypes.number.isRequired,
+        likes: propTypes.number.isRequired,
+    }),
+};
