@@ -1,15 +1,15 @@
 import React from "react";
 import propTypes from 'prop-types';
-import { Table, TableTitle, TableColumn } from './TransactionHistory.styled';
+import { Table, TableTitle, TableHeader, TableColumn } from './TransactionHistory.styled';
 
 export default function TransactionHistory({ items }) {
   return (
     <Table>
       <TableTitle>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TableHeader>Type</TableHeader>
+          <TableHeader>Amount</TableHeader>
+          <TableHeader>Currency</TableHeader>
         </tr>
       </TableTitle>
       {items.map(item => (

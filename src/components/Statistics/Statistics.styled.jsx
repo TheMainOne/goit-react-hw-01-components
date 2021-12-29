@@ -5,7 +5,7 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-      background-color: #c0bcbc;
+      background-color: gainsboro;
 
   width: 500px;
   margin: 20px auto;
@@ -13,7 +13,7 @@ export const Section = styled.section`
 `;
 
 export const SectionTitle = styled.h2`
-color: #ffffff;
+font-weight: 400;
   margin: 0;
   margin-bottom: 15px;
 `;
@@ -30,11 +30,13 @@ export const SectionItem = styled.li`
 display: flex;
     justify-content: center;
     align-items: center;
-    min-width:78px;
-  padding: 10px;
+    min-width:68px;
+  padding: 15px;
   border: 1px solid ${(props)=> props.backgroundColor};
   background-color: ${(props)=> props.backgroundColor};
   color: #ffffff;
+  cursor: pointer;
+  transition: transform 200ms linear;
   
   &:first-of-type {
     border-bottom-left-radius: 8px;
@@ -42,5 +44,9 @@ display: flex;
 
   &:last-of-type {
     border-bottom-right-radius: 8px;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
   }
 `;
