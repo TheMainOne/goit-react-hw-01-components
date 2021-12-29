@@ -5,33 +5,42 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 20px;
+      background-color: #c0bcbc;
 
-  width: 600px;
+  width: 500px;
   margin: 20px auto;
-  border: 3px solid #fe4f60;
-  border-radius: 50px;
+  border-radius: 8px;
 `;
 
 export const SectionTitle = styled.h2`
+color: #ffffff;
   margin: 0;
   margin-bottom: 15px;
 `;
 
 export const Sectionlist = styled.ul`
   display: flex;
+  width: 100%;
   list-style: none;
   padding: 0;
   margin: 0;
 `;
 
 export const SectionItem = styled.li`
-  padding: 18px;
-  border: 2px solid black;
-  border-radius: 10px;
-  background: #fe4f60;
-  color: white;
-  &:not(:last-child) {
-    margin-right: 5px;
-  } 
+display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width:78px;
+  padding: 10px;
+  border: 1px solid ${(props)=> props.backgroundColor};
+  background-color: ${(props)=> props.backgroundColor};
+  color: #ffffff;
+  
+  &:first-of-type {
+    border-bottom-left-radius: 8px;
+  }
+
+  &:last-of-type {
+    border-bottom-right-radius: 8px;
+  }
 `;

@@ -9,9 +9,9 @@ export default function User({ username, tag, location, avatar, stats }) {
                 src={avatar}
                 alt="User avatar"
             />
-            <Paragraph>{username}</Paragraph>
-            <Paragraph>{tag}</Paragraph>
-            <Paragraph>{location}</Paragraph>
+            <Paragraph>Name: {username}</Paragraph>
+            <Paragraph>Tag: @{tag}</Paragraph>
+            <Paragraph>Location: {location}</Paragraph>
         </Description>
 
         <List>

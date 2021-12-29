@@ -3,11 +3,13 @@ import styled from '@emotion/styled';
 export const Card = styled.div`
   width: 500px;
   margin: 0 auto;
-  border: 3px solid #fe4f60;
-  border-radius: 20px;
-  padding: 20px;
+  padding: 20px 0 0;
+  background-color: gainsboro;
+  border-radius: 8px;
+
   & img {
-    width: 320px;
+    width: 310px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -16,7 +18,10 @@ export const Description = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+
+  color: hsl(206deg 100% 73%);
+  font-weight: bold;
 `;
 
 export const Paragraph = styled.p`
@@ -25,20 +30,33 @@ export const Paragraph = styled.p`
 
 export const List = styled.ul`
   display: flex;
-  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
 `;
 
 export const ListItem = styled.li`
+  min-width: 135px;
+  background-color: hsl(206deg 100% 73%);
+  padding: 15px;
+  border: 1px solid hsl(0deg 0% 50%);
+  cursor: pointer;
+  color: #ffffff;
+  transition: transform 200ms linear;
 
- &:not(:last-child) {
-margin-right: 10px;
-  } 
+  &:first-of-type {
+    border-bottom-left-radius: 8px;
+  }
+
+  &:last-of-type {
+    border-bottom-right-radius: 8px;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+  }
 `;
 
 export const ListItemStats = styled.span`
-font-weight: bold;
+  font-weight: bold;
 `;
-

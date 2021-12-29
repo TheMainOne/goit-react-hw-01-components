@@ -5,11 +5,10 @@ import { Section, SectionTitle, Sectionlist, SectionItem } from "./Statistics.st
 export default function Statistics({ title, stats }) {
   return (
     <Section>
-      {title && <SectionTitle>{title}</SectionTitle>}
-
+      {title && <SectionTitle>{title}:</SectionTitle>}
       <Sectionlist>
-              {stats.map((stat) => (
-          <SectionItem key={stat.id}>
+        {stats.map((stat) => (
+          <SectionItem key={stat.id} backgroundColor={getRandomHexColor()}>
             <span className="label">{stat.label}: </span>
             <span className="percentage">{stat.percentage}</span>
           </SectionItem>
@@ -17,6 +16,10 @@ export default function Statistics({ title, stats }) {
       </Sectionlist>
     </Section>
   );
+}
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 Statistics.propTypes = {
@@ -27,3 +30,4 @@ Statistics.propTypes = {
     percentage: propTypes.number.isRequired,
   }))
 };
+
