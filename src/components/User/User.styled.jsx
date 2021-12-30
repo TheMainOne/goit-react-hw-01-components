@@ -36,7 +36,9 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  min-width: 135px;
+display: flex;
+    justify-content: center;
+  min-width: 134.6px;
   background-color: hsl(206deg 100% 73%);
   padding: 15px;
   border: 1px solid hsl(0deg 0% 50%);
